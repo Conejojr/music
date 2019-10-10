@@ -1,0 +1,80 @@
+// Place all the styles related to the blogs controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$hada: rgba(228, 196, 161, 0.2);
+$gray: rgba(128, 127, 127, 0.3);
+
+// font-family: 'Cormorant', serif;
+// font-family: 'Modak', cursive;
+// font-family: 'Bungee Inline', cursive;
+// font-family: 'Noto Serif JP', serif;
+
+html {
+  height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
+}
+
+
+.content{
+  margin-left: 10%;
+  // margin-top: 2%;
+  height: 95vh;
+  width: 80vw;
+  border: 10px $hada solid;
+  // box-shadow: 5px 5px $gray; 
+  .form{
+    margin: 0;
+    margin-left: 5%;
+    font-size: 50px;
+    letter-spacing: 10px;
+    font-weight: bold;
+    color: $gray;
+    // -webkit-text-stroke: 1px aliceblue;
+    // text-shadow: 5px 5px gray; 
+
+  }
+  #blog_title{
+    width: 500px;
+    height: 40px;
+
+  }
+  .title{
+    width: 300px;
+    font-size: 35px;
+    font-family: 'Cormorant';
+    color: $gray;
+    margin-left: 5%;
+  }
+  .text-area{
+    margin-left: 5%;
+    font-size: 25px;
+    font-family: 'Cormorant';
+    color: $gray;
+    margin-left: 5%;
+  }
+  #blog_text{
+    width: 600px;
+    height: 420px;
+    
+  }
+  .url{
+    margin-left: 5%;
+    font-size: 25px;
+    font-family: 'Cormorant';
+    color: $gray;
+    margin-left: 5%;
+  }
+  #blog_video_url{
+    height: 25px;
+    width: 500px;
+  }
+  #blog_image{
+    height: 25px;
+    width: 500px;
+  }
+  .submit{
+    margin-left: 5%;
+  }
+}

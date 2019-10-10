@@ -1,0 +1,564 @@
+// Place all the styles related to the mains controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+$hada: rgba(228, 196, 161, 0.2);
+$gray: rgba(128, 127, 127, 0.3);
+
+// font-family: 'Bahianita', cursive;
+// font-family: 'Cormorant', serif;
+// font-family: 'Modak', cursive;
+// font-family: 'Bungee Inline', cursive;
+// font-family: 'Noto Serif JP', serif;
+
+.body, html{
+  min-height: 100vh;
+  background: white;
+  
+}
+.header{
+  height: 100px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+
+  &__title{
+    padding-left: 50px;
+    font-family: 'Bungee Inline';
+    color: $gray;
+    text-shadow: 2px 2px gray;
+    -webkit-text-stroke: 2px aliceblue;
+    font-size: 40px;
+  }
+  @media screen and (min-width:1200px){
+    &__info{
+      position: absolute;
+      top: 15%;
+      font-family: 'Cormorant';
+      color: gray;
+      font-size: 140%;
+      text-shadow: 2px 2px $gray;
+      cursor: pointer;
+      padding: 20px 0 42px 0;
+      margin: 0; 
+    }
+  }
+  @media screen and (max-width:1200px){
+    &__info{
+      position: absolute;
+      top: 15%;
+      font-family: 'Cormorant';
+      color: gray;
+      font-size: 115%;
+      text-shadow: 2px 2px $gray;
+      cursor: pointer;
+      padding: 20px 0 42px 0;
+      margin: 0; 
+    }
+  }
+  @media screen and (max-width:1000px){
+    &__info{
+      position: absolute;
+      top: 15%;
+      font-family: 'Cormorant';
+      color: gray;
+      font-size: 80%;
+      text-shadow: 2px 2px $gray;
+      cursor: pointer;
+      padding: 20px 0 42px 0;
+      margin: 0; 
+    }
+  }
+}
+.info1{
+  right: 30%;
+}
+.info2{
+  right: 20%;
+}
+.info3{
+  right: 5%;
+}
+@keyframes slide-down{
+  0% {
+    height: 0px;
+  }
+  
+  100% {
+    height: 140px;
+  }
+}
+
+@keyframes slide-up{
+  0% {
+    height: 140px;
+    opacity: 1;
+  }
+  
+  100% {
+    height: 0px;
+    opacity: 0;
+  }
+}
+
+.kiji-down{
+  height: 0;
+  position: relative;
+  background: rgb(250, 253, 255);
+  overflow-x: scroll; 
+  overflow-y: hidden;
+
+  .kiji-box{
+    height: 90%;
+    width: 150%;
+    display: flex;
+    flex-direction: row;
+
+    .kiji{
+      width: 15%;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      border: 3px double $gray;
+      background-color:white;
+      
+
+      .kiji-image{
+        width: 50%;
+
+      }
+      .blog-info{
+        height:100%;
+        width: 40%;
+        margin-left: 5px;
+
+        .kiji-name{
+          height: 40%;
+          font-family: 'Noto Serif JP', serif;
+          font-weight: bold;
+        }
+        .kiji-date{
+          height: 40%;
+          font-size: 10px
+        }
+      }
+    }
+  }
+}
+
+.kiji-active{
+  display: block;
+  animation: slide-down 0.5s forwards;
+}
+
+.kiji-non{
+  animation: slide-up 1s forwards;
+}
+
+
+.header::before{
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  display: inline-block;
+  width: 85%;
+  height: 2px; 
+  transform: translateX(-50%);
+  background-color: $gray;
+}
+
+.contents{
+  display: flex;
+  flex-direction: row;
+  
+  .left-box{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 23%;
+    height: 1000px;
+    border-left: solid 1px $gray;
+    border-right: solid 1px $gray;
+
+    .youtube{
+      margin-top: 4%;
+      margin-left: 2%;
+      width: 94%;
+      height: 22%;
+      border-top: double gray 5px;
+      border-bottom: double $gray 5px;
+
+      .video{
+        margin-top: 0.6%;
+        margin-left: 0.6%;
+        width: 98%; 
+        height: 100%;
+      }
+    }
+
+    .calendar{
+      margin-top: 6%;
+      margin-left: 2%;
+      background-color: white;
+      border: double $hada 4px;
+      width: 290px;
+      height: 300px;
+
+        .year{
+          font-weight: bold;
+          color: $gray;
+          text-align: center;
+          font-family: 'Noto Serif JP'
+          
+        }
+        .week{
+          margin-top: -5%;
+          padding-left: 6%;
+          letter-spacing: 10px;
+          font-size: 100%;
+          font-family: 'Noto Serif JP';
+          color: $gray;
+        }
+
+
+        .calender--date{
+          height: 89%;
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: -8%;
+          margin-left: 3%;
+
+          .start{
+            width: 20px;
+            padding: 10px;
+            font-size: 90%;
+          }
+
+          .dates{
+            width: 8%;
+            margin: 3% 3% 7% 3%;
+            text-align: center;
+            font-family: 'Noto Serif JP';
+            font-size: 90%;
+            color: rgba(0, 0, 0, 0.6);
+            cursor: pointer;
+          }
+          .dates:hover{
+            background-color: rgba(230, 34, 34, .4);
+            // color: white;
+            border-radius: 100%;
+          }
+        }
+      }
+
+    .profile{
+      margin-top: 6%;
+      margin-left: 2%;
+      background-color: white;
+      width: 93%;
+      height: 35%;
+      border: double $hada 4px;
+
+      .main{
+        font-family: 'Noto Serif JP';
+        margin-left: 22%;
+
+        padding-top: 15px;
+        // font-family: 'Bungee Inline';
+        color: $gray;
+        -webkit-text-stroke: 1px gray;
+        font-size: 17px;
+      }
+      .my-info{
+        font-family: 'Noto Serif JP';
+        padding-left: 15px;
+        color: $gray;
+        letter-spacing: 1px;
+        -webkit-text-stroke: 1px gray;
+        font-size: 15px;
+      }
+    }
+    @media screen and (min-width:1100px){
+      .ranking-box{
+        display: none
+      }
+    }
+    @media screen and (max-width:1100px){
+      .ranking-box{
+        border-left: solid 1px $gray;
+        border-right: solid 1px $gray;
+        overflow: scroll;
+        height: 800px;
+        margin-top: 26%;
+
+        .ranking-info{
+          text-align: center;
+          font-size: 30px;
+          font-family: 'Modak';
+          color: $gray;
+          -webkit-text-stroke: 1px aliceblue;
+        }
+        &__ranking{
+            border:solid transparent 2px ;
+            // background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+          &__num{
+            margin-top: center;
+            width: 40px;
+            margin-top: 7%;
+            margin-left: 5px; 
+            font-size: 13px;
+            font-family: 'Cormorant'
+          }
+          &__img{
+            object-fit: cover;
+            padding-right: 10px;
+            width: 20%;
+            height: 100%;
+            
+          }
+          &__artist{
+            // overflow: hidden;
+    
+            &__title{
+              overflow: hidden;
+              font-size: 13px;
+              font-family: 'Cormorant'
+            }
+    
+            &__name{
+              font-size: 8px;
+              overflow: hidden;
+              font-family: 'Cormorant'
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width:1100px){
+  .blog{
+    min-height: 700px;
+    // max-height: 2500px;
+    width: 70%;
+    margin-left: 25px;
+    padding: 20px;
+
+    .blog-title{
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Noto Serif JP', serif;
+      padding: 20px;
+    }
+    .blog-text{
+      padding-bottom: 25px;
+      border-bottom: solid 3px $gray;
+    }
+    .comments{
+      min-height: 100px;
+      width: 100%;
+      padding: 10px;
+      .comment-info{
+        height: 40px;
+        width: 80%;
+        font-size: 15px;
+        margin: 0;
+        border-bottom: solid black 1px ;
+        display: flex;
+        flex-direction: row;
+        .comment-name{
+
+        }
+        .comment-time{
+          padding: 7px 0 0 15px;
+          font-size: 12px;
+        }
+      }
+      .comment-text{
+        margin: 10px 0 20px 5px;
+        font-size: 12px;
+      }
+    }
+    .create-comment{
+      height: 200px;
+      width: 60%;
+      #f_nickname{
+        height: 20px;
+        width: 30%;
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+      }
+      #f_comment{
+        height: 80px;
+        width: 80%;
+        padding: 10px;
+        font-size: 12px;
+
+      }
+      #f_submit{
+        height: 30px;
+        width: 65px;
+        font-size: 12px;
+        color: black;
+        background-color: white;
+        border: double 3px $gray;
+      }
+    }
+  }
+  }
+
+  @media screen and (min-width:1100px){
+  .blog{
+    min-height: 700px;
+    // max-height: 2500px;
+    width: 50%;
+    margin-left: 25px;
+    padding: 20px;
+
+    .blog-title{
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      font-family: 'Noto Serif JP', serif;
+      padding: 20px;
+    }
+    .blog-text{
+      padding-bottom: 25px;
+      border-bottom: solid 3px $gray;
+    }
+    .comments{
+      min-height: 100px;
+      width: 100%;
+      padding: 10px;
+      .comment-info{
+        height: 40px;
+        width: 80%;
+        font-size: 15px;
+        margin: 0;
+        border-bottom: solid black 1px ;
+        display: flex;
+        flex-direction: row;
+        .comment-name{
+
+        }
+        .comment-time{
+          padding: 7px 0 0 15px;
+          font-size: 12px;
+        }
+      }
+      .comment-text{
+        margin: 10px 0 20px 5px;
+        font-size: 12px;
+      }
+    }
+    .create-comment{
+      height: 200px;
+      width: 60%;
+      #f_nickname{
+        height: 20px;
+        width: 30%;
+        font-size: 12px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+      }
+      #f_comment{
+        height: 80px;
+        width: 80%;
+        padding: 10px;
+        font-size: 12px;
+
+      }
+      #f_submit{
+        height: 30px;
+        width: 65px;
+        font-size: 12px;
+        color: black;
+        background-color: white;
+        border: double 3px $gray;
+      }
+    }
+  }
+  }
+
+  @media screen and (min-width:1100px){
+  .right-box{
+    position: fixed;
+    right: 10px;
+    width: 20%;
+    border-left: solid 1px $gray;
+    border-right: solid 1px $gray;
+    overflow: scroll;
+    height: 800px;
+    margin-top: 2%;
+  @media screen and (min-width:1100px){
+    .right-info{
+      text-align: center;
+      font-size: 30px;
+      font-family: 'Modak';
+      color: $gray;
+      -webkit-text-stroke: 1px aliceblue;
+    }
+  }
+  @media screen and (max-width:1100px){
+    .right-info{
+      text-align: center;
+      font-size: 20px;
+      font-family: 'Modak';
+      color: $gray;
+      -webkit-text-stroke: 1px aliceblue;
+    }
+  }
+
+    &__ranking{
+        border:solid transparent 2px ;
+        display: flex;
+        flex-direction: row;
+        height: 60px;
+      &__num{
+        margin-top: center;
+        width: 40px;
+        margin-top: 7%;
+        margin-left: 5px; 
+        font-size: 13px;
+        font-family: 'Cormorant'
+      }
+      &__img{
+        object-fit: cover;
+        padding-right: 10px;
+        width: 20%;
+        height: 100%;
+        
+      }
+      &__artist{
+        // overflow: hidden;
+
+        &__title{
+          overflow: hidden;
+          font-size: 13px;
+          font-family: 'Cormorant'
+        }
+
+        &__name{
+          font-size: 8px;
+          overflow: hidden;
+          font-family: 'Cormorant'
+        }
+      }
+    }
+  }
+  }
+
+
+  @media screen and (max-width:1100px){
+    .right-box{
+      display: none;
+    }
+  }
+}

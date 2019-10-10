@@ -1,0 +1,4 @@
+json.title @blog.title
+json.video_url @blog.video_url
+json.text simple_format(@blog.text)
+json.id @blog.id

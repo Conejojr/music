@@ -1,0 +1,229 @@
+<div class="calendar">
+  <div class="year" >
+    <%= Calendar.year %>
+  </div>
+  <br>
+
+  <div class="calender--date">
+
+    <div class="start" >
+    <%= Calendar.start %>
+    </div> 
+
+    <% for i in 1..Calendar.date %>
+      <div class="dates" id="date<%= i %>">
+        <%= i %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%# <div data-uranus-component="widget" class="skin-widget" id="calendar">
+    <div class="skin-widgetInner">
+      <div data-uranus-component="widgetHead" class="skin-widgetHead">
+        <h3 data-uranus-component="widgetTitle" class="skin-widgetTitle">カレンダー</h3>
+      </div>
+      <div data-uranus-component="widgetBody" class="skin-widgetBody">
+        <div data-uranus-component="calendar" class="skin-calendar">
+          <div data-uranus-component="calendarBody" class="skin-calendarBody">
+            <table summary="カレンダー" data-uranus-component="calendarTable" class="skin-calendarTable">
+              <thead>
+                <tr>
+                  <th data-uranus-component="calendarMonth" class="skin-calendarMonth" scope="col" colspan="7">
+                    <div data-uranus-component="calendarTableHead" class="skin-calendarTableHead">
+                      <h4 data-uranus-component="calendarTableTitle" class="skin-calendarTableTitle">
+                        <a href="/ebizo-ichikawa/archiveentrylist-201909.html">                          2019年9月
+</a>
+                      </h4>
+                      <p data-uranus-component="calendarPrev" class="skin-calendarPrev">
+                        <button id="js-calendarPrev" class="skin-sideLink">
+                          <span data-uranus-icon="previous medium"></span>
+                        </button>
+                      </p>
+                      <p data-uranus-component="calendarNext" class="skin-calendarNext is-hidden">
+                        <button id="js-calendarNext" class="skin-sideLink">
+                          <span data-uranus-icon="next medium"></span>
+                        </button>
+                      </p>
+                    </div>
+                  </th>
+                </tr>
+                  <tr data-uranus-component="calendarDays" class="skin-calendarDays skin-sideBorder">
+                    <th data-uranus-component="calendarSun" class="skin-calendarSun" scope="col" abbr="Sunday">日</th>
+                    <th data-uranus-component="calendarMon" class="skin-calendarMon" scope="col" abbr="Monday">月</th>
+                    <th data-uranus-component="calendarTue" class="skin-calendarTue" scope="col" abbr="Tuesday">火</th>
+                    <th data-uranus-component="calendarWed" class="skin-calendarWed" scope="col" abbr="Wednesday">水</th>
+                    <th data-uranus-component="calendarThu" class="skin-calendarThu" scope="col" abbr="Thursday">木</th>
+                    <th data-uranus-component="calendarFri" class="skin-calendarFri" scope="col" abbr="Friday">金</th>
+                    <th data-uranus-component="calendarSat" class="skin-calendarSat" scope="col" abbr="Saturday">土</th>
+                  </tr>
+              </thead>
+              <tbody>
+                <tr data-uranus-component="calendarWeek" class="skin-calendarWeek skin-sideBorder">
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190901.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">1</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190902.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">2</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190903.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">3</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190904.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">4</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190905.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">5</span>
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190906.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">6</span>
+                        </a>  
+                    </td>
+                    <td>
+                        <a href="https://ameblo.jp/ebizo-ichikawa/day-20190907.html">
+                          <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">7</span>
+                        </a>
+                    </td>
+                </tr>
+                    <tr data-uranus-component="calendarWeek" class="skin-calendarWeek skin-sideBorder">
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190908.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">8</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190909.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">9</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190910.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">10</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190911.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">11</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190912.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">12</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190913.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">13</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190914.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">14</span>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr data-uranus-component="calendarWeek" class="skin-calendarWeek skin-sideBorder">
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190915.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">15</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190916.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">16</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190917.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">17</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190918.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">18</span>
+                            </a>
+                        </td>
+                        <td>
+                            <a href="https://ameblo.jp/ebizo-ichikawa/day-20190919.html">
+                              <span data-uranus-component="calendarDate" class="skin-calendarDate is-active">19</span>
+                            </a>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">20</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">21</span>
+                        </td>
+                    </tr>
+                    <tr data-uranus-component="calendarWeek" class="skin-calendarWeek skin-sideBorder">
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">22</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">23</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">24</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">25</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">26</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">27</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">28</span>
+                        </td>
+                    </tr>
+                    <tr data-uranus-component="calendarWeek" class="skin-calendarWeek skin-sideBorder">
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">29</span>
+                        </td>
+                        <td>
+                            <span data-uranus-component="calendarDate" class="skin-calendarDate">30</span>
+                        </td>
+                    </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> %>
