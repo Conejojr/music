@@ -52,3 +52,6 @@ production:
   database: music_production
   username: music
   password: <%= ENV['MUSIC_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
