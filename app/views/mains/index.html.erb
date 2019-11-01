@@ -37,7 +37,7 @@
       <iframe src="<%= @blog.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscree class="video"></iframe>
     </div>
     <div class="calendar">
-      <div class="year", data-year="<%= Calendar.year.strftime("%Y-%m-") %>" >
+      <div class="year", data-year="2019-10-" >
         <%= Calendar.year.strftime("%Y年%m月") %>
       </div>
       <div class="week"><p>日  月  火  水  木  金  土</p></div>
@@ -57,12 +57,11 @@
     </div>
 
     <div class="profile">
-      <a href="/blogs/new" class="main">管理人しょうかい</a>
+      <a href="" class="main">ポートフォリオ</a>
       <p class="my-info">
-        <br>blackmusic最高です。<br>
-        ただの洋楽好きのアマチュアエンジニア<br>
-        毎日音楽聴きながらの<br>プログラム楽しい！！<br><br>
-        Drake,　PartyNextDoor,　<br>Asap Rocky,　Future,　<br>Travis scott,　Post Malone,　<br>6LACK,　Juice　Dream,　XXXTentacion...
+        当サイトの紹介をさせてもらいます。<br>
+        右上のImamadeno-kijiで過去1週間分の記事を確認できます。<br>またカレンダーの日にちを押すことでその日の記事も取得できます。(2~8日までの1週間分だけ記事がります)<br>シングルページでAjaxを多用したサイトになっており、<br>
+        コメントも非同期で送ることができます。<br>ランキングはスクレイピングで習得しました。
       </p>
     </div>
 
