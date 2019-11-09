@@ -210,7 +210,8 @@ $gray: rgba(128, 127, 127, 0.3);
           font-weight: bold;
           color: $gray;
           text-align: center;
-          font-family: 'Noto Serif JP'
+          font-family: 'Noto Serif JP';
+          background-color: white;
           
         }
         .week{
@@ -299,6 +300,7 @@ $gray: rgba(128, 127, 127, 0.3);
           font-family: 'Modak';
           color: $gray;
           -webkit-text-stroke: 1px aliceblue;
+          background-color: white;
         }
         &__ranking{
             border:solid transparent 2px ;
@@ -430,6 +432,7 @@ $gray: rgba(128, 127, 127, 0.3);
       font-weight: bold;
       font-family: 'Noto Serif JP', serif;
       padding: 20px;
+      background-color: white;
     }
     .blog-text{
       padding-bottom: 25px;
@@ -446,6 +449,7 @@ $gray: rgba(128, 127, 127, 0.3);
         border-bottom: solid black 1px ;
         display: flex;
         flex-direction: row;
+        background-color: white;
         .comment-name{
 
         }

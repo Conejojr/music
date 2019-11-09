@@ -34,7 +34,7 @@
 <div class="contents">
   <div class="left-box">
     <div class="youtube">
-      <iframe src="<%= @blog.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscree class="video"></iframe>
+      <iframe src="<%= @blog.video_url %>" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscree class="video" title="MusicVideo"></iframe>
     </div>
     <div class="calendar">
       <div class="year", data-year="2019-10-" >
@@ -109,8 +109,11 @@
     <div class="create-comment">
       <p>〜コメントを送る〜</p>
       <%= form_with model:@comment, url: "mains#create", method: :post, remote: true  do |f|  %>
+        <%= f.label name="Nickname"%>
+        <br>
         <%= f.text_field :nickname, placeholder: "ニックネーム", id: "f_nickname" %>
         <br>
+        <%= f.label name="Comment"%>
         <%= f.text_area :comment, placeholder: "コメントを入力して下さい", id: "f_comment" %>
         <br>
         <%= f.hidden_field :blog_id, :value => @blog.id %>
