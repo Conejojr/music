@@ -346,7 +346,9 @@ $gray: rgba(128, 127, 127, 0.3);
     min-height: 700px;
     margin-left: 25px;
     padding: 20px;
-
+    .blog-main{
+      border-bottom: solid 3px $gray;
+    }
     .blog-title{
       text-align: center;
       font-size: 30px;
@@ -356,7 +358,7 @@ $gray: rgba(128, 127, 127, 0.3);
     }
     .blog-text{
       padding-bottom: 25px;
-      border-bottom: solid 3px $gray;
+      
     }
     .comments{
       min-height: 100px;
@@ -419,7 +421,9 @@ $gray: rgba(128, 127, 127, 0.3);
     width: 50%;
     margin-left: 25px;
     padding: 20px;
-
+    .blog-main{
+      border-bottom: solid 3px $gray;
+    }
     .blog-title{
       text-align: center;
       font-size: 30px;
@@ -429,7 +433,6 @@ $gray: rgba(128, 127, 127, 0.3);
     }
     .blog-text{
       padding-bottom: 25px;
-      border-bottom: solid 3px $gray;
     }
     .comments{
       min-height: 100px;

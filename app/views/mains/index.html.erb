@@ -20,7 +20,7 @@
   <div class="kiji-box">
     <% @blogs.each do |blog| %>
     <div class="kiji", data-id="<%= blog.id%>">
-      <img src="<%= blog.image %>" class="kiji-image">
+      <img src="<%= blog.image %>" class="kiji-image" alt="Album Jacket">
       <div class="blog-info">
         <p class="kiji-name"><%= blog.title %></p>
         <p class="kiji-date"><%= blog.created_at.strftime("%Y年%m月%d日") %> <br>の投稿</p>
@@ -74,7 +74,7 @@
           <p class="ranking-box__ranking__num">
             No'<%= i + 1%>
           </p>
-        <img src="http://www.billboard-japan.com<%= info.img_url %>" class="ranking-box__ranking__img">
+        <img src="http://www.billboard-japan.com<%= info.img_url %>" class="ranking-box__ranking__img" alt="Album Jacket">
           <div class="ranking-box__ranking__artist">
             <p class="ranking-box__ranking__artist__title">
               <%= info.music_title %>
@@ -90,7 +90,7 @@
 
   <div class="blog">
     <div class="blog-main">
-      <div class="blog-title"><%= @blog.title %></div>
+      <h2 class="blog-title"><%= @blog.title %></h2>
       <div class="blog-text"><%= simple_format(@blog.text) %></div>
     </div>
 
@@ -129,7 +129,7 @@
         <p class="right-box__ranking__num">
           No'<%= i + 1%>
         </p>
-      <img src="http://www.billboard-japan.com<%= info.img_url %>" class="right-box__ranking__img">
+      <img src="http://www.billboard-japan.com<%= info.img_url %>" class="right-box__ranking__img" alt="Album Jacket">
         <div class="right-box__ranking__artist">
           <p class="right-box__ranking__artist__title">
             <%= info.music_title %>
